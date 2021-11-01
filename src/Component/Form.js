@@ -20,27 +20,27 @@ const Form = (props) => {
             firstName, lastName, email, password, confirmPassword
         }
         setfirstName(e.target.value);
-        if (e.target.value.length < 1) {
+        if (firstName.length < 1) {
             setfirstNameError('First name is required!');
-        } else if (e.target.value.length < 3) {
+        } else if (firstName.length < 3) {
             setfirstNameError('First name must be 2 character or longer')
         }
         setlastName(e.target.value);
-        if (e.target.value.length < 1) {
+        if (lastName.length < 1) {
             setlastNameError('last name is required!');
-        } else if (e.target.value.length < 3) {
+        } else if (lastName.length < 3) {
             setlastNameError('last name must be 2 character or longer')
         }
         setEmail(e.target.value);
-        if (e.target.value.length < 1) {
+        if (email.length < 1) {
             setEmailError('Email is required!');
-        } else if (e.target.value.length < 3) {
+        } else if (email.length < 3) {
             setEmailError('Email must be 2 character or longer')
         }
         setPassword(e.target.value);
-        if (e.target.value.length < 1) {
+        if (password.length < 1) {
             setPasswordError('Password is required!');
-        } else if (e.target.value.length < 3) {
+        } else if (password.length < 3) {
             setfirstNameError('Password must be 2 character or longer')
         }
         setconfirmPassword(e.target.value)
@@ -53,7 +53,7 @@ const Form = (props) => {
     return (
         <div>
 
-            <form onSubmit={ (e) => createUser }>
+            <form onSubmit={ createUser }>
                 <div>
                     First Name:
                     <input type='text' onChange={(e) => setfirstName(e.target.value)}>
